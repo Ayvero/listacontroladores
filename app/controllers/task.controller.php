@@ -34,4 +34,27 @@ class TaskController {
         header("Location: " . BASE_URL);
     }
 
+
+
+    function upDateTask($id) {
+        $task2=$this->model->upDateTaskById($id);
+        $this->view->UpDate2($task2);
+        
+    }
+    function EditEnd() {
+        // TODO: validar entrada de datos
+
+        $tit2= $_POST['tit2'];
+        $des2= $_POST['des2'];
+        $pri2= $_POST['pri2'];
+        $com2=$_POST['com2'];
+        $id= $_POST['id'];
+        
+        $id = $this->model->editEnd2($tit2, $des2, $pri2,$com2,$id);
+
+        
+    }
+   
+
+    
 }
