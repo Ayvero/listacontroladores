@@ -3,29 +3,49 @@
     <div class="row">
         <div class="col-9">
             <div class="form-group">
-                <label>Título</label>
-                <input name="title" type="text" class="form-control">
+                <label>Articulo</label>
+                <input name="descripcion" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>precio</label>
+                <input name="precio" type="text" class="form-control">
             </div>
         </div>
 
         <div class="col-3">
             <div class="form-group">
-                <label>Prioridad</label>
-                <select name="priority" class="form-control">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                <label>talle</label>
+                <select name="talle" class="form-control">
+                    <option value="1">Small</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Large</option>
+                    <option value="4">XLarge</option>
+                    <option value="5">XXLarge</option>
                 </select>
+            </div>
+
+            <div class="form-group">
+                <label>Color</label>
+                <select name="color" class="form-control">
+                    <option value="1">rojo</option>
+                    <option value="2">negro</option>
+                    <option value="3">blanco</option>
+                    <option value="4">azul</option>
+                    <option value="5">rosa</option>
+                </select>
+            </div>
+        
+            <div class="form-group">
+                <label>Marca</label>
+                <input name="marca" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>stock</label>
+                <input name="stock" type="text" class="form-control">
             </div>
         </div>
     </div>
 
-    <div class="form-group">
-        <label>Descripcion</label>
-        <textarea name="description" class="form-control" rows="3"></textarea>
-    </div>
-
+    
     <button type="submit" class="btn btn-primary mt-2">Guardar</button>
 </form>

@@ -1,5 +1,5 @@
 <?php
-require_once './app/controllers/task.controller.php';
+require_once './app/controllers/business.controller.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
@@ -12,30 +12,30 @@ if (!empty($_GET['action'])) {
 $params = explode('/', $action);
 
 // instancio el unico controller que existe por ahora
-$taskController = new TaskController();
+$businessController = new businessController();
 
 
 // tabla de ruteo
 switch ($params[0]) {
-    case 'list':
-        $taskController->showTasks();
+    case 'home':
+        $businessController->showClothes();
         break;
     case 'add':
-        $taskController->addTask();
+        $businessController->addClothes();
         break;
     case 'delete':
         // obtengo el parametro de la acción
         $id = $params[1];
-        $taskController->deleteTask($id);
+        $businessController->deleteClothes($id);
         break;
         case 'upDate':
 
             $id = $params[1];
-            $taskController->upDateTask($id);
+            $businessController->upDateClothes($id);
            
            break;
            case 'editEnd':
-            $taskController->editEnd();
+            $businessController->editEnd();
             
             break;
         
