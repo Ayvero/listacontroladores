@@ -28,6 +28,17 @@ switch ($params[0]) {
         $id = $params[1];
         $taskController->deleteTask($id);
         break;
+        case 'upDate':
+
+            $id = $params[1];
+            $taskController->upDateTask($id);
+           
+           break;
+           case 'editEnd':
+            $taskController->editEnd();
+            
+            break;
+        
     default:
         echo('404 Page not found');
         break;
